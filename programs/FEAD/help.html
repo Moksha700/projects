@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - DanceIndia</title>
+
+    <style>
+        /* Reset default margin and padding */
+        
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li,
+        address {
+            margin: 0;
+            padding: 0;
+        }
+        /* Set base font styles */
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        /* Header styles */
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+        
+        .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-right: 1rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+        /* Main section styles */
+        
+        .main {
+            padding: 2rem;
+        }
+        
+        .help-section {
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .help-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .help-section p {
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        .help-section ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+        
+        .help-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .help-section a {
+            color: #007bff;
+        }
+        
+        .help-section a:hover {
+            text-decoration: underline;
+        }
+        
+        address {
+            margin-top: 1rem;
+            font-style: normal;
+        }
+        /* Footer styles */
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        /* Responsive styles */
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="brand">DanceIndia HelpDesk</div>
+                <ul>
+                    <li><a href="https://moksha700.github.io/projects/programs/FEAD/dance forms.html">Home</a></li>
+                    <li><a href="#">Pictures</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <button onclick="search()">Search</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="help-section">
+            <h2>Contact Us</h2>
+            <p>For assistance or inquiries, you can reach us at:</p>
+            <ul>
+
+                <li>Email: danceindia123@gmail.com</li>
+                <li>Phone: +91 1234567890</li>
+            </ul>
+            <p>Our address:</p>
+            <address>
+                DanceIndia<br>
+                Ramavarappadu, Vijaywada<br>
+                Andhra Pradesh
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; DanceIndia pvt Ltd</p>
+        </div>
+    </footer>
+</body>
+
+</html>
