@@ -1,593 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DanceIndia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Bharatanatyam</title>
 </head>
 
 <style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #081b29;
+    h1 {
+        font-size: 35px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
-    .container {
-        width: 80%;
-        margin: 0 auto;
+    .cont {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        gap: 30px;
     }
     
-    header {
-        background-color: #a8d771;
-        color: #333;
-        padding: 15px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid #ffffff;
-        /* Add a subtle border at the bottom */
+    .info {
+        margin-top: 10px;
+    }
+    /* .about {
+        width: 90%;
+    } */
+    
+    .bhar img {
+        height: 300px;
         border-radius: 10px;
+        margin-right: 50px;
+        margin-top: 100px;
+        /* Adjusted margin to create space for text */
     }
     
-    .brand {
-        font-size: 1.5rem;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-        color: navy/* Dark color for the brand name */
-    }
-    
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    nav ul li {
-        display: inline;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: #333;
-        transition: color 0.3s;
-        font-weight: bold;
-        padding: 10px 15px;
-    }
-    
-    nav ul li a:hover {
-        color: blueviolet;
-        /* Orange color on hover */
-    }
-    
-    .search-box {
-        display: flex;
-    }
-    
-    .search-box input[type="text"] {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        /* Rounded corners */
-        font-size: 16px;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    .search-box button {
-        padding: 10px 20px;
-        background-color: #0e0570;
-        /* Orange */
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        /* Rounded corners */
-        cursor: pointer;
-        transition: background-color 0.3s;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    .search-box button:hover {
-        background-color: #781ad5;
-        /* Darker orange on hover */
-    }
-    
-    .help {
-        cursor: pointer;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    .main {
-        padding: 20px;
-    }
-    
-    .dance-section {
-        margin-bottom: 40px;
-    }
-    
-    .dance-section h2 {
-        color: cyan;
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    
-    .dance-items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
-    .dance-item {
-        width: calc(33.33% - 20px);
-        /* Adjust for margin */
-        margin-bottom: 20px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-        background-color: #fff;
-        text-align: center;
-    }
-    
-    .dance-item:hover {
-        transform: translateY(-5px);
-    }
-    
-    .dance-item img {
-        width: 100%;
+    .his img {
         height: 200px;
-        object-fit: cover;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-    
-    .dance-details {
-        padding: 20px;
-    }
-    
-    .dance-details h3 {
-        margin-top: 0;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    
-    .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-    
-    .Know_more,
-    .add-to-wishlist {
-        padding: 10px 20px;
-        border: none;
         border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
+        float: left;
+        margin-right: 10px;
+        margin-left: 30px;
     }
     
-    .Know_more {
-        background-color: #4CAF50;
-        /* Green */
-        color: #fff;
+    .his1 img {
+        height: 200px;
+        border-radius: 5px;
+        float: right;
+        margin-right: 30px;
+        margin-left: 10px;
     }
     
-    .add-to-wishlist {
-        background-color: #ff4500;
-        /* Orange */
-        color: #fff;
+    .ara img {
+        height: 200px;
+        border-radius: 5px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 30px;
     }
     
-    .Know_more:hover,
-    .add-to-wishlist:hover {
-        background-color: #45a049;
-        /* Darker green on hover */
-        color: #fff;
+    .cost img {
+        height: 180px;
+        border-radius: 5px;
+        float: right;
+        margin-right: 30px;
+        margin-left: 10px;
     }
     
-    .dance-details h4 {
-        margin: 10px 0;
-        font-size: 1rem;
-        color: #555;
-        /* Adjust color to your preference */
+    .sym .sym1 {
+        height: 72px;
+        border-radius: 5px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 30px;
     }
     
-    .dance-details h4::before {
-        content: "Price: ";
-        font-weight: normal;
+    .sym .sym2 {
+        height: 72px;
+        border-radius: 5px;
+        float: right;
+        margin-right: 30px;
+        margin-left: 10px;
     }
     
-    .dance-details h4 span {
-        font-weight: bold;
-        color: #ff4500;
-        /* Orange color for price */
+    .sym .sym3 {
+        height: 72px;
+        border-radius: 5px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+    
+    .sym .sym4 {
+        height: 72px;
+        border-radius: 5px;
+        float: right;
+        margin-right: 30px;
+        margin-left: 10px;
     }
 </style>
 
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <div class="brand">DanceIndia</div>
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="3">Photos</a></li>
-                </ul>
-                <div class="search-box">
-                    <input type="text" placeholder="Search Dance" />
-                    <button>Search</button>
-                </div>
-                <div class="help">Help</div>
-            </div>
-        </nav>
-    </header>
+    <h1>Bharatanatyam</h1>
+    <section>
+        <div class="cont">
+            <div class="info">
+                <b>Etymology: </b> Portmanteau of the Tamil words bhavam (expression), ragam (melody), thalam (rhythm), and natyam (dance)<br><br>
+                <b>Genre: </b> Indian Classical Dance<br><br>
+                <b>Origin: </b> Tamil Nadu, India <br><br>
 
-    <main class="main">
-        <section id="classical" class="dance-section">
-            <h2>Classical</h2>
-            <div class="dance-items">
-                <div class="dance-item">
-                    <img src="https://indusladies.com/wp/wp-content/uploads/2012/10/bharatanatyam1.jpg" alt="bharatanatyam">
-                    <div class="dance-details">
-                        <h3>Bharatanatyam</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/bharatanatyam.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
+                <div class="about"><i>Bharatanatyam</i> (Tamil: பரதநாட்டியம்) is an Indian classical dance form that originated in India. It is a classical dance form recognized by the Sangeet Natak Akademi, and expresses South Indian religious themes and spiritual ideas,
+                    of Hinduism and Jainism.A description of precursors of Bharatanatyam from the Natya Shastra dated around (500 BCE) and in the ancient Tamil epic Silappatikaram dated around (171 CE), while temple sculptures of the 6th to 9th century
+                    CE suggest dance was a refined performance art by the mid-1st millennium CE. Sadiraattam, which was renamed Bharatanatyam in 1932, is the oldest classical dance tradition in India. Bharatanatyam is the state dance form of Tamil Nadu.
+                    <br><br>
+                    <i>Bharatanatyam</i> contains different types of bani. Bani, or "tradition", is a term used to describe the dance technique and style specific to a guru or school, often named for the village of the guru. Bharatanatyam style is noted
+                    for its fixed upper torso, bent legs, and flexed knees (Aramandi) combined with footwork, and a vocabulary of sign language based on gestures of hands, eyes, and face muscles. The dance is accompanied by music and a singer, and typically
+                    the dancer's guru is present as the nattuvanar or director-conductor of the performance and art. The performance repertoire of Bharatanatyam, like other classical dances, includes nrita (pure dance), nritya (Conveys a meaning to the
+                    audience through hand gestures) and natya (Consists of the elements of drama).A program of bharatanatyam usually lasts two hours without interruption and includes a specific list of procedures, all performed by one dancer, who does
+                    not leave the stage or change costume. The accompanying orchestra—composed of drums, drone, and singer—occupies the back of the stage, led by the guru, or the teacher, of the dancer. <br><br> Sadiraattam remained exclusive to Hindu
+                    temples through the 19th century. It was banned by the colonial British government in 1910, but the Indian community protested against the ban and expanded its performance outside temples in the 20th century as Bharatanatyam. Modern
+                    stage productions of Bharatanatyam have become popular throughout India and include performances that are purely dance-based on non-religious ideas and fusion themes. The Thanjavur Quartet developed the basic structure of modern Bharatanatyam
+                    by formalizing it.
                 </div>
-                <div class="dance-item">
-                    <img src="https://images.hindustantimes.com/img/2022/07/22/1600x900/44a45004-09bb-11ed-8045-0e66fdd513ce_1658493616209.jpg" alt="kuchupudi">
-                    <div class="dance-details">
-                        <h3>Kuchupudi</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/kuchipudi.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://kerala.me/wp-content/uploads/2015/11/Kathakali.jpg" alt="Kathakali">
-                    <div class="dance-details">
-                        <h3>Kathakali</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/kathakali.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://sparkpr.in/wp-content/uploads/2019/07/IMG-3-1.jpg" alt="Odissi">
-                    <div class="dance-details">
-                        <h3>Odissi</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/odissi.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://www.sattriyakristi.com/wp-content/uploads/2020/06/Sattriya-Dance-Krishnakshi-3-1024x731.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Sattriya</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/sattriya.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://s3.ap-south-1.amazonaws.com/atg-storage-s3/assets/Frontend/images/article_image/atg-world-0119501512226.jpg" alt="Manipuri">
-                    <div class="dance-details">
-                        <h3>Manipuri</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/manipuri.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dance-item">
-                    <img src="https://thecreativepost.co.in/wp-content/uploads/2022/02/1-1024x678.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Kathak</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/kathak.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5b2b060750a54fda2b21f4e2/1533874797785-O37LWOT5K0F4UWC039HQ/Sitaram-Parinay-group.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Mohiniyattam</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/mohiniyattam.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Chhau_Nritya_%281%29.jpg/1280px-Chhau_Nritya_%281%29.jpg" alt="Chhau">
-                    <div class="dance-details">
-                        <h3>Chhau</h3>
-                        <div class="button-container">
-                            <a href="https://moksha700.github.io/projects/programs/FEAD/chhau.html"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <section id="folk" class="dance-section">
-            <h2>Folk</h2>
-            <div class="dance-items">
-                <div class="dance-item">
-                    <img src="https://www.gosahin.com/go/p/j/1576445711_vilasini-natyam.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Andhra Pradesh</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://live.staticflickr.com/7860/45924515424_aa3a46c484_b.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Arunachal Pradesh</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://imgeng.jagran.com/images/2024/feb/upawhite%20(3)1707407944037.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Assam</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Jat_Jatni_Bihar.jpg/1024px-Jat_Jatni_Bihar.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Bihar</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://live.staticflickr.com/4001/4443478136_63723ed9b5_b.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Chhattisgarh</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://www.forbesindia.com/media/images/2023/Dec/img_224187_1_33xu8zy-highres_bg.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Gujarat</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://www.thegoan.net/uploads/news/big_107217_231215-BUR008A.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Goa</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dance-item">
-                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*IfJpfS_y3VpqhCPqkqvToA.jpeg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Haryana</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dance-item">
-                    <img src="https://kalapeet.com/wp-content/uploads/2020/11/school-chalao-dhamal-dance-haryana.png" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Himachal Pradesh</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://cnt.mobisium.com/wp-content/uploads/2019/04/6452669531_f33b123af3_b-800x534.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Jammu & Kashmir</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://i.pinimg.com/736x/2d/af/0b/2daf0bba6b5bbb7be02f19d09986e423.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Jharkhand</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://dineshmaneer.com/wp-content/uploads/2012/03/blog-14.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Karnataka</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://casualwalker.com/wp-content/uploads/2023/09/ottan-thullal-garuda-garva-bhangam-52.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Kerala </h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://i.ytimg.com/vi/JfFp4VK2_9w/maxresdefault.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Maharashtra</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://learn.podium.school/wp-content/uploads/2023/11/sattriya-2-300x178-1.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Madhya Pradesh</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://i.ytimg.com/vi/tmtn6epDqp8/maxresdefault.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Manipur</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://www.auchitya.com/wp-content/uploads/2020/10/SHAD_SUK_MYNSIEM.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Meghalaya </h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://thenewsmill.com/wp-content/uploads/2022/09/Cheraw-bamboo-dance.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Mizoram</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://www.oddessemania.in/wp-content/uploads/2023/10/war-dance-1024x636.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Nagaland</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://images.picxy.com/cache/2019/8/28/dad19d7cfb447b0526f36bcff6741013.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Odisha</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dance-item">
-                    <img src="https://khalsavox.com/wp-content/uploads/2023/04/image-41.png" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Punjab</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://www.unnatisilks.com/cdn/shop/articles/c58573035b584798c80b5e7f2cfdeb89-scaled.jpg?v=1655289712&width=2560" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Rajasthan</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://i0.wp.com/www.cgpsc.info/wp-content/uploads/2023/07/folk-dance-of-sikkim.jpeg?fit=600%2C397&ssl=1" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Sikkim</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://i.pinimg.com/originals/8b/fc/41/8bfc4138c3f38c189cbfe32cd55e0fbf.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Tamil Nadu</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://i.pinimg.com/originals/9a/b3/73/9ab373139a86a180eea8499065c97515.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Tripura </h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/DevendraSharma_SultanaDaku.jpg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Uttar Pradesh</h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dance-item">
-                    <img src="https://www.cgpsc.info/wp-content/uploads/2023/04/Folk-dances-of-Uttarakhand.jpeg" alt="Sattriya">
-                    <div class="dance-details">
-                        <h3>Uttarakhand </h3>
-                        <div class="button-container">
-                            <a href="#"><button class="Know_more">Know more</button></a>
-                        </div>
-                    </div>
-                </div>
-
-
-
 
             </div>
-        </section>
-    </main>
+            <div class="bhar">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Indian_classical_dance_-_Bharatanatyam_from_of_Tamil_Nadu.jpg/800px-Indian_classical_dance_-_Bharatanatyam_from_of_Tamil_Nadu.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Etymology</h2>
+        <div>In 1932, E Krishna Iyer and Rukmini Devi Arundale put forward a proposal to rename Sadiraattam (Tamil: சதிராட்டம்), also known as Parathaiyar Aattam or Thevarattam, as Bharatanatyam, to give the dance form a measure of respect, at a meeting of
+            the Madras Music Academy. They also were instrumental in modifying mainly the Pandanallur style of dance. The word Bharatam is also seen as a backronym, with bha standing for bhavam (feelings, emotions), ra for ragam (melody, framework for
+            musical notes), and tam for talam (rhythm). The term Natyam is a Sanskrit word for "dance". The compound word Bharatanatyam is seen to connote a dance that harmoniously expresses bhavam, ragam and talam.</div>
+    </section>
+
+    <section>
+        <h2>History</h2>
+        <div class="history">
+
+            The theoretical foundations of dance Bharatanatyam are found first in Kootha Nool in Tamil and then referred also in Natya Shastra, a Sanskrit text of performance arts. <br> <i>Natya Shastra</i> is attributed to the ancient scholar Bharata
+            Muni, and its first complete compilation is dated to between 200 BCE and 200 CE, but estimates vary between 500 BCE and 500 CE. The most studied version of the Natya Shastra text consists of about 6000 verses structured into 36 chapters. The
+            text, states Natalia Lidova, describes the theory of Tāṇḍava dance (Shiva), the theory of rasa, of bhāva, expression, gestures, acting techniques, basic steps, standing postures—all of which are part of Indian classical dances. Dance and performance
+            arts, states this text, are a form of expression of spiritual ideas, virtues and the essence of scriptures. <br><br> Historical references to dance are found in the Tamil epics Silappatikaram (2nd century) and Manimegalai (6th century). The
+            ancient text Silappatikaram, includes a story of a dancing girl named Madhavi; it describes the dance training regimen called Arangatrau Kathai of Madhavi in verses 113 through 159. The carvings in Kanchipuram's Shiva temple that have been
+            dated to 6th to 9th century CE suggest dance was a well-developed performance art by about the mid 1st millennium CE.
+            <br><br>
+
+            <div class="his">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Temple_troglodytique_d%C3%A9di%C3%A9_%C3%A0_Shiva_%28Badami%2C_Inde%29_%2814146091479%29.jpg/800px-Temple_troglodytique_d%C3%A9di%C3%A9_%C3%A0_Shiva_%28Badami%2C_Inde%29_%2814146091479%29.jpg">
+                <p>A famous example of illustrative sculpture is in the southern gateway of the Chidambaram temple (≈12th century) dedicated to the Hindu god Shiva, where 108 poses, described as karanas in the Natya Shastra, are carved in stone.
+                    <br> Bharatanatyam shares the dance poses of many ancient Shiva sculptures in Hindu temples. The Cave 1 of the Badami cave temples, dated to the 7th century, portrays the Tandava-dancing Shiva as Nataraja. The image, 5 feet (1.5 m)
+                    tall, has 18 arms in a form that expresses the dance positions arranged in a geometric pattern. The arms of Shiva express mudras (symbolic hand gestures), that are used in Bharatanatyam.
+                    <br><br>
+                    <b>Devadasis, anti-dance movement, colonial ban, and the decline</b>
+                    <br><br> Some colonial Indologists and modern authors have argued that Bharatanatyam is a descendant of an ancient Devadasi ('servant girls of Devas') culture, suggesting a historical origin back to between 300 BCE and 300 CE. Modern
+                    scholars have questioned this theory for lack of any direct textual or archeological evidence. Historic sculptures and texts do describe and project dancing girls, as well as temple quarters dedicated to women, but they do not state
+                    them to be courtesans and prostitutes as alleged by early colonial Indologists. According to Davesh Soneji, a critical examination of evidence suggests that courtesan dancing is a phenomenon of the modern era, beginning in the late
+                    16th or the 17th century of the Nayaka period of Tamil Nadu. According to James Lochtefeld, classical dance remained exclusive to Hindu temples through the 19th century, only in the 20th century appearing on stage outside the temples.
+                    Further, the Thanjavur Maratha kingdom patronized classical dance.
+                </p>
+            </div>
+
+            <div class="his1">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Rukmini_Devi.jpg" alt="">
+                <p>With the arrival of the East India Company in the 18th century, and British colonial rule in the 19th, classical Indian dance forms were ridiculed and discouraged, and these performance arts declined. Christian missionaries and British
+                    officials presented "nautch girls" of north India (Kathak) and "devadasis" of south India (Bharatanatyam) as evidence of "harlots, debased erotic culture, slavery to idols and priests" tradition, and Christian missionaries demanded
+                    that this must be stopped, launching the "anti-dance movement" in 1892. The anti-dance camp accused the dance form as a front for prostitution, while revivalists questioned the constructed colonial histories.
+                    <br><br> In 1910, the Madras Presidency of the British Empire banned temple dancing, and with it the classical dance tradition in Hindu temples. <br><br> The banning of temple dancing stemmed from the 1892 anti-dance movement and new,
+                    liberal colonial perspectives. What the English imagined nineteenth-century modernity to be did not include what they regarded Bharatanatyam to be, which they regarded as indecent. Coming from a deep orientalist perspective, the morality
+                    of people who performed Bharatanatyam was called into question. Accusations of prostitution were thrown around. Some women from traditionally performing communities were used as a way to showcase obscenity. New reforms disregarded
+                    local issues like production of the arts for the sake of liberalism and felt able to impose disruptive reforms that reshaped lives at all levels and subjected people to new standards. Colonial reforms were largely unsympathetic to
+                    local traditions, and dismissive of the industry surrounding producing art. The adoption of Anglo-Indian laws that imposed certain restrictions and regulations on certain expressions of sexuality, and more so regulations on bodies
+                    and sex in general, which in turn affected traditional dance practices. Temple dancing became caught in a web of multiple political agendas, hoping to bend this burgeoning morality issue to suit their cause. Colonial denunciations
+                    of the practice of temple dancing were caught up in liberal ideals of bringing modernity to India, where modernity was tied to Anglo-Protestant moral ideas about how bodies are viewed and how sexuality was presented.
+
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <h2>Arangetram</h2>
+        <div class="ara">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Bharatanatyan_Student_with_Guru.jpg">
+            <p>
+                A Bharatanatyam arangetram is a solo debut performance that signifies the completion of initial formal training of a young dancer, female or male in Indian classical dance. The term Arangetram translates to "ascending the stage". This performance is typically
+                done ten to twelve years after a dancer begins learning Bharatanatyam. Still, more importantly, it is done when the guru believes the student is ready for a solo performance. This solo debut is synonymous with a "coming-of-age" celebration.
+                The arangetram is a culmination of multiple years of hard work by the student and the guru, and it is an opportunity for the dancer to showcase his or her dedication and skills developed over the years. Throughout this debut, the dancer
+                performs a series of dances. The dancer must build up his or her concentration and stamina to perform solo dances for approximately three hours. Each dance performed symbolizes various aspects of Hindu religion. <br><br><br><br><br><br>
+            </p>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Sequences of dances</h2>
+        A traditional Bharatanatyam arangetram dance performance follows a seven to eight-part order of presentation. This set is called <i>Margam</i>.
+        <br><br>
+        <b><i>Puspanjali</i></b><br> The Arangetram performance typically begins with a dance called the Pushpanjali, which translates to "offering of flowers". In this dance, the performer offers flowers and salutations to the Hindu deities, the guru,
+        and the audience as a mark of respect. The beginning of the dance symbolizes supplication, from which the dancer then commences the rest of the performance. <br><br>
+        <b><i>Alarippu</i></b><br>The presentation can also begin with a rhythmic invocation (<i>vandana</i>) called the <i>Alarippu</i>. It is a pure dance, which combines a thank you and benediction for blessings from the gods and goddesses, the guru
+        and the gathered performance team. It also serves as a preliminary warm-up dance, without melody, to enable the dancer to loosen their body, and journey away from distractions and towards single-minded focus. <br><br>
+        <b><i>Jatiswaram</i></b><br>The next stage of the performance adds melody to the movement of <i>Alarippu</i>, and this is called <i>Jatiswaram</i>. The dance remains a prelim technical performance (<i>nritta</i>), pure in form and without any
+        expressed words. The drums set the beat, of any Carnatic music <i>raga</i> (melody). They perform a sequence (<i>Korvai</i>) to the rhythm of the beat, presenting to the audience the unity of music, rhythm and movements. <br><br>
+        <b><i>Shabdam</i></b><br> The performance sequence then adds <i>Shabdam</i> (expressed words). This is the first item of Margam where expressions are introduced. The solo dancer, the vocalist(s), and the musical team, in this stage of the production,
+        present short compositions, with words and meaning, in a spectrum of moods. This performance praises God (such as Krishna, Shiva, Rama, and Murugan) and their qualities. <br><br>
+        <b><i>Varnam</i></b><br>The performance thereafter evolves into the Varnam stage. This marks the arrival into the sanctum sanctorum core of the performance. It is the longest section and the nritya. A traditional Varnam may be as long as 30–45
+        minutes or sometimes an hour. Varnam offers huge scope for improvisation and an experienced dancer can stretch the Varnam to a desirable length. The artist presents the play or the main composition, reveling in all their movements, silently communicating
+        the text through codified gestures and footwork, harmoniously with the music, rhythmically punctuated. The dancer performs complicated moves, such as expressing a verse at two speeds. Their hands and body tell a story, whether of love and longing
+        or of a battle between the good and the evil, as the musicians envelop them with musical notes and tones that set the appropriate mood. <br><br>
+        <b><i>Padam</i></b><br>The Padam is next. This is the stage of reverence, of simplicity, of abhinaya (expression) of the solemn spiritual message or devotional religious prayer (bhakti). The music is lighter, the chant intimate, the dance emotional.
+        The choreography attempts to express rasa (emotional taste) and a mood, while the recital may include items such as a keertanam (expressing devotion), a javali (expressing divine love) or something else. <br><br>
+        <b><i>Tillana</i></b><br>The performance sequence ends with a Tillana, the climax. It closes out the nritya portion, the movements exit the temple of expressive dance, returning to the nritta style, where a series of pure movement and music are
+        rhythmically performed. Therewith the performance ends. <br><br>
+        <b><i>Shlokam or Mangalam</i></b>The seventh and final item in the sequence can be either a Shlokam or a Mangalam. The dancer calls for blessings on the people all around. The overall sequence of Bharatanatyam, states Balasaraswati, thus moves
+        from "mere meter; then melody and meter; continuing with music, meaning and meter; its expansion in the centerpiece of the varnam; thereafter, music and meaning without meter; (...) a non-metrical song at the end. We see a most wonderful completeness
+        and symmetry in this art".
+
+        <h2>Costume and Attire</h2>
+        <div class="cost">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bharathanatyam_By_Ranjitha.jpg/1280px-Bharathanatyam_By_Ranjitha.jpg">
+            <p>
+                The costume of a female Bharatanatyam dancer resembles a Tamil Hindu bridal dress. It typically consists of a sari in bright colors with golden or silver zari embroidery on the borders. The costume can be stitched from the sari, with individual pieces
+                for a bottom (either a skirt or salwar-shaped pants), a pleated piece which falls in front and opens like a hand fan when the dancer flexes her knees or performs footwork, a hip piece that covers the seat of the pant/skirt, and a torso
+                piece that looks like an aanchal (i.e. the draped part of a regular sari). Some dancers also opt for an unstitched sari that is draped specially, with the single piece of cloth starting around the legs like a dhoti, then upwards along
+                the front torso, over the left shoulder, and then down the back with its end held at the waist by a jeweled belt. The costume of a male Bharatanatyam dancer is usually either a sari or a white cotton cloth draped around the legs and bottom
+                half of the body like a dhoti. During performances, the upper body of the male dancer remains bare. Male dancers typically do not wear stitched costumes. <br><br> Both female and male dancers wear elaborate jewelry on their
+                ears, nose, neck, and wrists. Female dancers wear additional jewelry on their heads that emphasizes their hairline and parting. They also wear a smaller piece of jewelry on each side of their parting. These represent the sun and the moon.
+                <br><br> Long hair on both male and female dancers is either secured by a bun or a braid. Female dancers with short hair often use braid extensions or bun hair pieces to simulate long hair. Female dancers also wear imitation flowers made
+                of either cloth or paper around their braids or buns. These are known as (or gajra). <br><br> Both male and female dancers wear makeup, including foundation, blush, lipstick, and thick eyeliner or kohl, which helps the audience see and
+                understand their facial expressions. <br><br> All dancers wear leather anklets on each foot, which are called salangai or ghungroos. These are made of small bells attached to a broad leather strap with belts that secure them at the back
+                of the ankle. The bells are arranged in uniform rows and can be heard when the dancer moves their feet. The salangai helps emphasize the rhythm of the music as well as the dancer's footwork. <br><br> Lastly, all dancers outline their hands
+                and feet with red kumkum powder or alta, a tradition that helps the audience easily see their hand and foot gestures. For classes, training, practice, or rehearsals, dancers traditionally wear a special dance sari. These saris are always
+                cotton and have a shorter breadth than normal saris, falling at the knees rather than the ankles. These are paired with cotton pyjamas and blouses. The sari is worn with pleats at the front and tied tightly around the torso and hips. However,
+                in recent times, dancers also opt for salwar kameez or athletic wear (like T-shirts and leggings) when not performing. <br><br> The accompanying music to Bharatanatyam is in the Carnatic style of South India, as is the recitation and chanting.
+                The vocalist is called nattuvanar, typically also the conductor of the entire performance, who may be the guru of the dancer and may also be playing cymbals or one of the musical instruments. The recited verses and text in Bharatanatyam
+                are in Tamil, Telugu, Kannada and Sanskrit. <br><br> The instruments used include the mridangam (double-sided drum), nadaswaram (long type of oboe made from black wood), nattuvangam (cymbals), the flute, violin and veena.
+            </p>
+        </div>
+    </section>
+    <section>
+        <h2>Symbolism</h2>
+        <div class="sym">
+            <div>
+                <img class="sym1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Hasthamudra11.JPG/1280px-Hasthamudra11.JPG">
+                <p>
+                    Bharatanatyam, like all classical dances of India, uses symbolism in its abhinaya (acting) and its goals. The roots of abhinaya appear in the Natya Shastra text, which defines drama in verse 6.10 as something that aesthetically arouses joy in the spectator,
+                    through the medium of the actor's art of communication, that helps connect and transport the individual into a sensual inner state of being. A performance art, asserts Natya Shastra, connects the artists and the audience through abhinaya
+                    (literally, "carrying to the spectators"), that is applying body-speech-mind and scene, wherein the actors communicate to the audience, through song and music. Drama in this ancient Sanskrit text, thus is an art that engages every
+                    aspect of life to glorify and give a state of joyful consciousness.
+                </p>
+            </div>
+            <div>
+                <img class="sym2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hasthamudra8.JPG/1280px-Hasthamudra8.JPG" alt="">
+                <p>
+                    The communication through symbols is in the form of expressive gestures and pantomime set to music. The gestures and facial expressions convey the ras (sentiment, emotional taste) and bhava (mood) of the underlying story. In the Hindu texts on dance,
+                    the dancer successfully expresses the spiritual ideas by paying attention to four aspects of a performance: Angika (gestures and body language), Vachika (song, recitation, music and rhythm), Aharya (stage setting, costume, makeup,
+                    jewelry), and Sattvika (artist's mental disposition and emotional connection with the story and audience, wherein the artist's inner and outer state resonates). Abhinaya draws out the bhava (mood, psychological states).
+                </p>
+            </div>
+            <div>
+                <img class="sym3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Hasthamudra7.JPG/1280px-Hasthamudra7.JPG" alt="">
+                <p>
+                    The gestures used in Bharatanatyam are called Hasta (or mudras). These symbols are of three types: asamyuta hastas (single hand gestures), samyuta hastas (two hand gestures), and nrtta hastas (dance hand gestures). Like words in a glossary, these gestures
+                    are presented in the nritta as a list or embellishment to a prelim performance. In nritya stage of Bharatanatyam, these symbols set in a certain sequence become sentences with meaning, with emotions expressed through facial expressions
+                    and other aspects of abhinaya. The basic standing position is called as Aramandi.
+                </p>
+            </div>
+            <div>
+                <img class="sym4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Hasthamudra19.JPG/1280px-Hasthamudra19.JPG" alt="">
+                <p>
+                    Bharatanatyam contains at least 20 asanas found in modern yoga, including Dhanurasana (the bow, a back-arch); Chakrasana (the wheel, a standing back-arch); Vrikshasana (the tree, a standing pose); and Natarajasana, the pose of dancing Shiva. 108 karanas
+                    of classical temple dance are represented in temple statuary; they depict the devadasi temple dancers who made use of yoga asanas in their dancing. Bharatanatyam is also considered a form of Bhakti Yoga. However, Natarajasana is not
+                    found in any medieval hatha yoga text; it was among the many asanas introduced into modern yoga by Krishnamacharya in the early 20th century.
+                </p>
+            </div>
 
 
+        </div>
 
 
+    </section>
 
 
-
-    <script>
-        function searchFood() {
-            // Get the value from the search input
-            var searchValue = document.querySelector('.search-box input[type="text"]').value;
-
-            // Perform the search functionality (You can implement your search logic here)
-            alert('Searching for: ' + searchValue);
-        }
-    </script>
 </body>
 
 </html>
