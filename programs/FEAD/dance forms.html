@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DanceIndia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #081b29;
+    }
+    
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header {
+        background-color: #a8d771;
+        color: #333;
+        padding: 15px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #ffffff;
+        /* Add a subtle border at the bottom */
+        border-radius: 10px;
+    }
+    
+    .brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        color: navy/* Dark color for the brand name */
+    }
+    
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+        font-weight: bold;
+        padding: 10px 15px;
+    }
+    
+    nav ul li a:hover {
+        color: blueviolet;
+        /* Orange color on hover */
+    }
+    
+    .search-box {
+        display: flex;
+    }
+    
+    .search-box input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        /* Rounded corners */
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .search-box button {
+        padding: 10px 20px;
+        background-color: #0e0570;
+        /* Orange */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        /* Rounded corners */
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .search-box button:hover {
+        background-color: #781ad5;
+        /* Darker orange on hover */
+    }
+    
+    .help {
+        cursor: pointer;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .main {
+        padding: 20px;
+    }
+    
+    .dance-section {
+        margin-bottom: 40px;
+    }
+    
+    .dance-section h2 {
+        color: cyan;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .dance-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .dance-item {
+        width: calc(33.33% - 20px);
+        /* Adjust for margin */
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        background-color: #fff;
+        text-align: center;
+    }
+    
+    .dance-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .dance-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .dance-details {
+        padding: 20px;
+    }
+    
+    .dance-details h3 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .Know_more,
+    .add-to-wishlist {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .Know_more {
+        background-color: #4CAF50;
+        /* Green */
+        color: #fff;
+    }
+    
+    .add-to-wishlist {
+        background-color: #ff4500;
+        /* Orange */
+        color: #fff;
+    }
+    
+    .Know_more:hover,
+    .add-to-wishlist:hover {
+        background-color: #45a049;
+        /* Darker green on hover */
+        color: #fff;
+    }
+    
+    .dance-details h4 {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #555;
+        /* Adjust color to your preference */
+    }
+    
+    .dance-details h4::before {
+        content: "Price: ";
+        font-weight: normal;
+    }
+    
+    .dance-details h4 span {
+        font-weight: bold;
+        color: #ff4500;
+        /* Orange color for price */
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="brand">DanceIndia</div>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="3">Photos</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Search Dance" />
+                    <button>Search</button>
+                </div>
+                <div class="help">Help</div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="classical" class="dance-section">
+            <h2>Classical</h2>
+            <div class="dance-items">
+                <div class="dance-item">
+                    <img src="https://indusladies.com/wp/wp-content/uploads/2012/10/bharatanatyam1.jpg" alt="bharatanatyam">
+                    <div class="dance-details">
+                        <h3>Bharatanatyam</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://images.hindustantimes.com/img/2022/07/22/1600x900/44a45004-09bb-11ed-8045-0e66fdd513ce_1658493616209.jpg" alt="kuchupudi">
+                    <div class="dance-details">
+                        <h3>Kuchupudi</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://kerala.me/wp-content/uploads/2015/11/Kathakali.jpg" alt="Kathakali">
+                    <div class="dance-details">
+                        <h3>Kathakali</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://sparkpr.in/wp-content/uploads/2019/07/IMG-3-1.jpg" alt="Odissi">
+                    <div class="dance-details">
+                        <h3>Odissi</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://www.sattriyakristi.com/wp-content/uploads/2020/06/Sattriya-Dance-Krishnakshi-3-1024x731.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Sattriya</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://s3.ap-south-1.amazonaws.com/atg-storage-s3/assets/Frontend/images/article_image/atg-world-0119501512226.jpg" alt="Manipuri">
+                    <div class="dance-details">
+                        <h3>Manipuri</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dance-item">
+                    <img src="https://thecreativepost.co.in/wp-content/uploads/2022/02/1-1024x678.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Kathak</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5b2b060750a54fda2b21f4e2/1533874797785-O37LWOT5K0F4UWC039HQ/Sitaram-Parinay-group.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Mohiniyattam</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Chhau_Nritya_%281%29.jpg/1280px-Chhau_Nritya_%281%29.jpg" alt="Chhau">
+                    <div class="dance-details">
+                        <h3>Chhau</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="folk" class="dance-section">
+            <h2>Folk</h2>
+            <div class="dance-items">
+                <div class="dance-item">
+                    <img src="https://www.gosahin.com/go/p/j/1576445711_vilasini-natyam.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Andhra Pradesh</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://live.staticflickr.com/7860/45924515424_aa3a46c484_b.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Arunachal Pradesh</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://imgeng.jagran.com/images/2024/feb/upawhite%20(3)1707407944037.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Assam</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Jat_Jatni_Bihar.jpg/1024px-Jat_Jatni_Bihar.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Bihar</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://live.staticflickr.com/4001/4443478136_63723ed9b5_b.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Chhattisgarh</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://www.forbesindia.com/media/images/2023/Dec/img_224187_1_33xu8zy-highres_bg.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Gujarat</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://www.thegoan.net/uploads/news/big_107217_231215-BUR008A.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Goa</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dance-item">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*IfJpfS_y3VpqhCPqkqvToA.jpeg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Haryana</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dance-item">
+                    <img src="https://kalapeet.com/wp-content/uploads/2020/11/school-chalao-dhamal-dance-haryana.png" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Himachal Pradesh</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://cnt.mobisium.com/wp-content/uploads/2019/04/6452669531_f33b123af3_b-800x534.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Jammu & Kashmir</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://i.pinimg.com/736x/2d/af/0b/2daf0bba6b5bbb7be02f19d09986e423.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Jharkhand</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://dineshmaneer.com/wp-content/uploads/2012/03/blog-14.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Karnataka</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://casualwalker.com/wp-content/uploads/2023/09/ottan-thullal-garuda-garva-bhangam-52.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Kerala </h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://i.ytimg.com/vi/JfFp4VK2_9w/maxresdefault.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Maharashtra</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://learn.podium.school/wp-content/uploads/2023/11/sattriya-2-300x178-1.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Madhya Pradesh</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://i.ytimg.com/vi/tmtn6epDqp8/maxresdefault.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Manipur</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://www.auchitya.com/wp-content/uploads/2020/10/SHAD_SUK_MYNSIEM.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Meghalaya </h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://thenewsmill.com/wp-content/uploads/2022/09/Cheraw-bamboo-dance.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Mizoram</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://www.oddessemania.in/wp-content/uploads/2023/10/war-dance-1024x636.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Nagaland</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://images.picxy.com/cache/2019/8/28/dad19d7cfb447b0526f36bcff6741013.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Odisha</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dance-item">
+                    <img src="https://khalsavox.com/wp-content/uploads/2023/04/image-41.png" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Punjab</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://www.unnatisilks.com/cdn/shop/articles/c58573035b584798c80b5e7f2cfdeb89-scaled.jpg?v=1655289712&width=2560" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Rajasthan</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://i0.wp.com/www.cgpsc.info/wp-content/uploads/2023/07/folk-dance-of-sikkim.jpeg?fit=600%2C397&ssl=1" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Sikkim</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://i.pinimg.com/originals/8b/fc/41/8bfc4138c3f38c189cbfe32cd55e0fbf.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Tamil Nadu</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://i.pinimg.com/originals/9a/b3/73/9ab373139a86a180eea8499065c97515.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Tripura </h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/DevendraSharma_SultanaDaku.jpg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Uttar Pradesh</h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dance-item">
+                    <img src="https://www.cgpsc.info/wp-content/uploads/2023/04/Folk-dances-of-Uttarakhand.jpeg" alt="Sattriya">
+                    <div class="dance-details">
+                        <h3>Uttarakhand </h3>
+                        <div class="button-container">
+                            <button class="Know_more">Know more</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <script>
+        function searchFood() {
+            // Get the value from the search input
+            var searchValue = document.querySelector('.search-box input[type="text"]').value;
+
+            // Perform the search functionality (You can implement your search logic here)
+            alert('Searching for: ' + searchValue);
+        }
+    </script>
+</body>
+
+</html>
