@@ -45,9 +45,6 @@ header span {
     text-decoration: underline;
 }
 
-#menu-toggle {
-    display: none;
-}
 
 main {
     padding: 0 40px;
