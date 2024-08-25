@@ -1,6 +1,12 @@
 let tasks = [];
 let completedTasks = [];
 
+document.getElementById('new-task').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+        addTask();
+    }
+});
+
 function addTask() {
     const taskInput = document.getElementById('new-task');
     const taskText = taskInput.value.trim();
@@ -72,6 +78,13 @@ function deleteTask(id) {
 
 function filterTasks(filter) {
     renderTasks(filter);
+
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.filter-options button');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Add active class to the clicked button
+    document.querySelector(`.filter-options button[onclick="filterTasks('${filter}')"]`).classList.add('active');
 }
 
 renderTasks();
