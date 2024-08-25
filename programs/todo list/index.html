@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,8 +17,10 @@
             <button onclick="filterTasks('recent')">Recently Added</button>
             <button onclick="filterTasks('completed')">Recently Completed</button>
         </div>
-        <input type="text" id="new-task" placeholder="Add a new task...">
-        <button class="btn" onclick="addTask()">Add Task</button>
+        <div class="input-group">
+            <input type="text" id="new-task" placeholder="Add a new task...">
+            <button class="btn" onclick="addTask()">Add Task</button>
+        </div>
         <ul id="task-list"></ul>
     </div>
 
